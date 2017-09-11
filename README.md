@@ -1,2 +1,1 @@
-# CommandLine
-CLI, Command Line Interface and Console
+# Command Line Interface and Console
