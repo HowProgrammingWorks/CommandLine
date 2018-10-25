@@ -1,5 +1,7 @@
 'use strict';
 
+console.clear();
+
 console.log('log');
 
 const obj = {
@@ -41,3 +43,5 @@ for (let i = 0; i < 10000; i++) {
 console.timeEnd('Loop time');
 
 console.trace('Treace here');
+
+console.log('\n' + Object.keys(console).join(', '));
