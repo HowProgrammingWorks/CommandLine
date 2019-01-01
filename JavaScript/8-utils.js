@@ -14,7 +14,6 @@ const box = (row, col, height, width) => {
   const border = '┌┐─│└┘'.split('');
   pos(row, col);
   write(border[0] + border[2].repeat(w) + border[1]);
-  pos(row + h, col);
   for (let i = 1; i < h; i++) {
     pos(row + i, col);
     write(border[3] + ' '.repeat(w) + border[3]);
@@ -30,7 +29,12 @@ read(s => {
   process.exit(0);
 });
 clear();
-setTimeout(() => process.exit(0), 10000);
+
+setTimeout(() => {
+  write('\n\n');
+  process.exit(0);
+}, 10000);
+
 box(10, 10, 4, 30);
 pos(11, 12);
 write('Login: ');

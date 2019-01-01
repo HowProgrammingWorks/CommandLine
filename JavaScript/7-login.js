@@ -9,7 +9,10 @@ process.stdin.on('data', chunk => {
 write('\x1Bc');
 write('\x1b[10;10H');
 
-setTimeout(() => process.exit(0), 10000);
+setTimeout(() => {
+  write('\n\n');
+  process.exit(0);
+}, 10000);
 
 write(`
                       ┌────────────────────────────┐
