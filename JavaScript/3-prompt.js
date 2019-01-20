@@ -12,7 +12,7 @@ rl.prompt();
 
 const commands = {
   help() {
-    console.log('Commands: ' + Object.keys(commands).join(', '));
+    console.log('Commands:', Object.keys(commands).join(', '));
   },
   hello() {
     console.log('Hello there!');
