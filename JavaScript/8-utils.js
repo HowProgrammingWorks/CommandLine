@@ -22,7 +22,7 @@ const box = (row, col, height, width) => {
   write(border[4] + border[2].repeat(w) + border[5]);
 };
 
-// Uasage
+// Usage
 
 read(s => {
   write(`\nHello, ${s}!\n`);
