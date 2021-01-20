@@ -42,6 +42,6 @@ for (let i = 0; i < 10000; i++) {
 }
 console.timeEnd('Loop time');
 
-console.trace('Treace here');
+console.trace('Trace here');
 
 console.log('\n' + Object.keys(console).join(', '));
