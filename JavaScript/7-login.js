@@ -2,8 +2,17 @@
 
 const write = s => process.stdout.write(s);
 
+let login = '';
+let password = '';
+
 process.stdin.on('data', chunk => {
-  write(`\nHello, ${chunk.toString().trim()}!`);
+  if (!login) {
+    login = chunk.toString().trim();
+    write('\x1b[13;34H');
+  } else {
+    password = chunk.toString().trim();
+    write(`\nHello, ${login}!\n Your password is: ${password}`);
+  }
 });
 
 write('\x1Bc');
@@ -15,9 +24,10 @@ setTimeout(() => {
 }, 10000);
 
 write(`
-                      ┌────────────────────────────┐
-                      │ Login:                     │
-                      └────────────────────────────┘
+                      ┌───────────────────────────────┐
+                      │ Login:                        │
+                      │ Password:                     │
+                      └───────────────────────────────┘
 `);
 
-write('\x1b[2A\x1b[31C');
+write('\x1b[3A\x1b[31C');
