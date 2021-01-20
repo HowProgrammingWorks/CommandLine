@@ -7,7 +7,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question('Enter your name: ', name => {
+rl.question('Enter your name: ', (name) => {
   console.log(`Hello, ${name}!`);
   rl.close();
 });

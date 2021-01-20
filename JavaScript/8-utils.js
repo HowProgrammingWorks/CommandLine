@@ -2,8 +2,8 @@
 
 // Utilities
 
-const write = s => process.stdout.write(s);
-const read = callback => process.stdin.on('data', chunk => {
+const write = (s) => process.stdout.write(s);
+const read = (callback) => process.stdin.on('data', (chunk) => {
   callback(chunk.toString().trim());
 });
 const clear = () => write('\x1Bc');
@@ -24,7 +24,7 @@ const box = (row, col, height, width) => {
 
 // Uasage
 
-read(s => {
+read((s) => {
   write(`\nHello, ${s}!\n`);
   process.exit(0);
 });

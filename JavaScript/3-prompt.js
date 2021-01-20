@@ -22,7 +22,7 @@ const commands = {
   }
 };
 
-rl.on('line', line => {
+rl.on('line', (line) => {
   line = line.trim();
   const command = commands[line];
   if (command) command();

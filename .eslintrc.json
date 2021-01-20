@@ -11,8 +11,7 @@
   "rules": {
     "indent": [
       "error",
-      2,
-      { "SwitchCase": 1 }
+      2
     ],
     "linebreak-style": [
       "error",
@@ -114,6 +113,9 @@
     "new-parens": [
       "error"
     ],
+    "no-lonely-if": [
+      "error"
+    ],
     "no-trailing-spaces": [
       "error"
     ],
@@ -209,7 +211,7 @@
     ],
     "arrow-parens": [
       "error",
-      "as-needed"
+      "always"
     ],
     "arrow-body-style": [
       "error",

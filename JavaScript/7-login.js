@@ -1,11 +1,11 @@
 'use strict';
 
-const write = s => process.stdout.write(s);
+const write = (s) => process.stdout.write(s);
 
 let login = '';
 let password = '';
 
-process.stdin.on('data', chunk => {
+process.stdin.on('data', (chunk) => {
   if (!login) {
     login = chunk.toString().trim();
     write('\x1b[13;34H');
