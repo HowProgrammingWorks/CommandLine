@@ -2,7 +2,7 @@
 
 // Node.js v17
 
-const readline = require('readline').promises;
+const readline = require('node:readline').promises;
 
 const rl = readline.createInterface({
   input: process.stdin,
