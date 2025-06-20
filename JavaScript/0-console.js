@@ -18,14 +18,14 @@ const obj = {
       name: 'Annia Cornificia Faustina Minor',
       city: 'Roma',
       born: 160,
-    }
-  ]
+    },
+  ],
 };
 
 Object.defineProperty(obj, 'childCount', {
   enumerable: false,
   writable: false,
-  value: 13
+  value: 13,
 });
 
 console.log({ obj });

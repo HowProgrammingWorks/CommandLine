@@ -19,7 +19,7 @@ const commands = {
   },
   exit() {
     rl.close();
-  }
+  },
 };
 
 rl.on('line', (line) => {
