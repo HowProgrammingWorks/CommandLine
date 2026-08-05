@@ -12,14 +12,17 @@ const box = (row, col, height, width) => {
   const h = height - 2;
   const w = width - 2;
   const border = '┌┐─│└┘'.split('');
+  const top = `${border[0]}${border[2].repeat(w)}${border[1]}`;
+  const mid = `${border[3]}${' '.repeat(w)}${border[3]}`;
+  const bottom = `${border[4]}${border[2].repeat(w)}${border[5]}`;
   pos(row, col);
-  write(border[0] + border[2].repeat(w) + border[1]);
+  write(top);
   for (let i = 1; i < h; i++) {
     pos(row + i, col);
-    write(border[3] + ' '.repeat(w) + border[3]);
+    write(mid);
   }
   pos(row + h, col);
-  write(border[4] + border[2].repeat(w) + border[5]);
+  write(bottom);
 };
 
 // Usage

@@ -44,4 +44,4 @@ console.timeEnd('Loop time');
 
 console.trace('Trace here');
 
-console.log('\n' + Object.keys(console).join(', '));
+console.log(`\n${Object.keys(console).join(', ')}`);
